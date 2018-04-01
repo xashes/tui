@@ -8,13 +8,16 @@ name = "pypi"
 [packages]
 
 dash = "*"
-dash_renderer = "*"
+dash-renderer = "*"
 dash-html-components = "*"
 dash-core-components = "*"
 plotly = "*"
 pyecharts = "*"
-Django = "*"
+django = "*"
 
 
 [dev-packages]
 
+pytest = "*"
+selenium = "*"
+ipython = "*"
