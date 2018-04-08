@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 dash = "*"
 dash-renderer = "*"
 dash-html-components = "*"
@@ -14,10 +11,12 @@ dash-core-components = "*"
 plotly = "*"
 pyecharts = "*"
 django = "*"
-
+autoflake = "*"
+"flake8" = "*"
+pyls-isort = "*"
+pyls-mypy = "*"
 
 [dev-packages]
-
 pytest = "*"
 selenium = "*"
 ipython = "*"
