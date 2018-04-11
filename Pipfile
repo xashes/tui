@@ -15,6 +15,8 @@ autoflake = "*"
 "flake8" = "*"
 pyls-isort = "*"
 pyls-mypy = "*"
+jaqs = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 pytest = "*"
@@ -23,3 +25,4 @@ ipython = "*"
 pytest-django = "*"
 importmagic = "*"
 epc = "*"
+fire = "*"

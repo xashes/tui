@@ -1,12 +1,17 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Kline Chart</title>
+        {% for jsfile_name in script_list %}
+            <script src="{{ host }}/{{ jsfile_name }}.js"></script>
+        {% endfor %}
     </head>
+
     <body>
-        <h1>Kline</h1>
         <form method="POST">
             <input name="symbol" id="id_symbol" placeholder="Enter a symbol" />
             {% csrf_token %}
         </form>
+        {{ kline|safe }}
     </body>
 </html>
