@@ -8,10 +8,6 @@ class KlineTest(TestCase):
         match = resolve('/charts/kline/')
         self.assertEqual(match.func, kline)
 
-    def test_kline_returns_correct_html(self):
-        request = HttpRequest()
-        response = kline(request)
-        html = response.content.decode('utf8')
-        self.assertTrue(html.startswith('<html>'))
-        self.assertIn('<title>Kline</title>', html)
-        self.assertTrue(html.endswith('</html>'))
+    def test_kline_returns_correct_template(self):
+        response = self.client.get('/charts/kline/')
+        self.assertTemplateUsed(response, 'kline.html')

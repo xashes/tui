@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "713c49a85410045da2fae27babf030b1fe296bd279dbc653f9b6ad40ee655189"
+            "sha256": "3fcbfb09d3ea8289c5bd43356eac13e2d68d23bee55ddd4b66924776168ad57f"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -57,10 +57,10 @@
         },
         "dash-core-components": {
             "hashes": [
-                "sha256:86eecee870bb7bd0ec67d5b951b59bf1a72b75a0e907afeb3f3a2fe7450a570a"
+                "sha256:2dbbc0121eab102d92f7b407099cb28818676f3753ea635fb29a9f8b9df0a118"
             ],
             "index": "pypi",
-            "version": "==0.22.0"
+            "version": "==0.22.1"
         },
         "dash-html-components": {
             "hashes": [
@@ -426,6 +426,20 @@
             ],
             "version": "==4.2.1"
         },
+        "epc": {
+            "hashes": [
+                "sha256:a14d2ea74817955a20eb00812e3a4630a132897eb4d976420240f1152c0d7d25"
+            ],
+            "index": "pypi",
+            "version": "==0.0.5"
+        },
+        "importmagic": {
+            "hashes": [
+                "sha256:3f7757a5b74c9a291e20e12023bb3bf71bc2fa3adfb15a08570648ab83eaf8d8"
+            ],
+            "index": "pypi",
+            "version": "==0.1.7"
+        },
         "ipython": {
             "hashes": [
                 "sha256:85882f97d75122ff8cdfe129215a408085a26039527110c8d4a2b8a5e45b7639",
@@ -536,6 +550,12 @@
             ],
             "index": "pypi",
             "version": "==3.11.0"
+        },
+        "sexpdata": {
+            "hashes": [
+                "sha256:1ac827a616c5e87ebb60fd6686fb86f8a166938c645f4089d92de3ffbdd494e0"
+            ],
+            "version": "==0.0.3"
         },
         "simplegeneric": {
             "hashes": [

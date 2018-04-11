@@ -1,7 +1,7 @@
-from django.urls import path
+from django.urls import re_path
 
 from . import views
 
 urlpatterns = [
-    path('kline/', views.kline, name='kline'),
+    re_path('^kline/$', views.kline, name='kline'),
 ]
