@@ -17,6 +17,8 @@ pyls-isort = "*"
 pyls-mypy = "*"
 jaqs = "*"
 sqlalchemy = "*"
+fire = "*"
+selenium = "*"
 
 [dev-packages]
 pytest = "*"
