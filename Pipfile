@@ -4,25 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-dash = "*"
-dash-renderer = "*"
-dash-html-components = "*"
-dash-core-components = "*"
-plotly = "*"
 pyecharts = "*"
-django = "*"
-autoflake = "*"
-"flake8" = "*"
-pyls-isort = "*"
-pyls-mypy = "*"
+Django = "*"
 jaqs = "*"
-sqlalchemy = "*"
+SQLAlchemy = "*"
 
 [dev-packages]
 pytest = "*"
 selenium = "*"
-ipython = "*"
 pytest-django = "*"
-importmagic = "*"
-epc = "*"
 fire = "*"
