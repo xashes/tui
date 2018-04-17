@@ -5,12 +5,13 @@ name = "pypi"
 
 [packages]
 pyecharts = "*"
-Django = "*"
 jaqs = "*"
-SQLAlchemy = "*"
+django = "*"
+fire = "*"
+sqlalchemy = "*"
 
 [dev-packages]
-pytest = "*"
 selenium = "*"
-pytest-django = "*"
-fire = "*"
+
+[requires]
+python_version = "3.6"
