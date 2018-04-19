@@ -9,9 +9,13 @@ jaqs = "*"
 django = "*"
 fire = "*"
 sqlalchemy = "*"
+neomodel = "*"
+django-neomodel = "*"
 
 [dev-packages]
 selenium = "*"
+"flake8" = "*"
+autoflake = "*"
 
 [requires]
 python_version = "3.6"
