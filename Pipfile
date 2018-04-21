@@ -5,12 +5,12 @@ name = "pypi"
 
 [packages]
 pyecharts = "*"
-jaqs = "*"
 django = "*"
 fire = "*"
 sqlalchemy = "*"
 neomodel = "*"
 django-neomodel = "*"
+jaqs = "*"
 
 [dev-packages]
 selenium = "*"

@@ -13,9 +13,9 @@ import fire
 import pandas as pd
 from sqlalchemy import create_engine
 import jaqs.util as jutil
-import util as tutil
+from . import util as tutil
 
-from consts import HISTORY_DIR, HISTORY_DB, DAILY_TABLE, MINUTE_TABLE, INDEX_TABLE, STOCK_TABLE, SH_INDEX
+from .consts import HISTORY_DIR, HISTORY_DB, DAILY_TABLE, MINUTE_TABLE, INDEX_TABLE, STOCK_TABLE, SH_INDEX
 
 db_path = os.path.join(HISTORY_DIR, HISTORY_DB)
 engine = create_engine('sqlite:///{}'.format(db_path))
