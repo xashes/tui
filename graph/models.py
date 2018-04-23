@@ -3,10 +3,11 @@ import neomodel as nm
 
 
 # Relationship Models
-class ConceptRel(nm.StructuredRel):
+class ComponentRel(nm.StructuredRel):
     updated = nm.DateTimeProperty(default_now=True)
     rating = nm.IntegerProperty()
     relevancy = nm.IntegerProperty()
+    weight = nm.FloatProperty()
 
 
 class ProductRel(nm.StructuredRel):
@@ -23,15 +24,34 @@ class StakeRel(nm.StructuredRel):
 # Label Models
 class Company(nm.StructuredNode):
     name = nm.StringProperty(unique_index=True, require=True)
-    sid = nm.StringProperty(unique_index=True)
+    symbol = nm.StringProperty()
+    market = nm.StringProperty()
+    list_date = nm.DateTimeProperty()
+    updated = nm.DateTimeProperty(default_now=True)
 
     concept = nm.RelationshipTo(
-        'Concept', 'RELATED_TO', cardinality=nm.ZeroOrMore, model=ConceptRel)
+        'Concept',
+        'COMPONENT_OF',
+        cardinality=nm.ZeroOrMore,
+        model=ComponentRel)
     industry = nm.RelationshipTo(
-        'Industry', 'RELATED_TO', cardinality=nm.ZeroOrMore, model=ConceptRel)
+        'Industry',
+        'COMPONENT_OF',
+        cardinality=nm.ZeroOrMore,
+        model=ComponentRel)
+    index = nm.RelationshipTo(
+        'Industry',
+        'COMPONENT_OF',
+        cardinality=nm.ZeroOrMore,
+        model=ComponentRel)
     customer = nm.RelationshipTo(
         'Company', 'SUPPLIES_TO', cardinality=nm.ZeroOrMore)
     product = nm.RelationshipTo('Product', 'PRODUCES', model=ProductRel)
+
+
+class Index(nm.StructuredNode):
+    name = nm.StringProperty(unique_index=True, require=True)
+    symbol = nm.StringProperty()
 
 
 class Fund(nm.StructuredNode):
