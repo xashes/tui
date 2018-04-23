@@ -9,10 +9,10 @@ import fire
 import jaqs.util as jutil
 from sqlalchemy import create_engine
 
-import local
-from consts import (DAILY_TABLE, HISTORY_DB, HISTORY_DIR, INDEX_TABLE,
-                          MINUTE_TABLE, SH_INDEX, STOCK_TABLE)
-from remote_service import ds
+from . import local
+from .consts import (DAILY_TABLE, HISTORY_DB, HISTORY_DIR, INDEX_TABLE,
+                     MINUTE_TABLE, SH_INDEX, STOCK_TABLE)
+from .remote_service import ds
 
 db_path = os.path.join(HISTORY_DIR, HISTORY_DB)
 engine = create_engine('sqlite:///{}'.format(db_path))

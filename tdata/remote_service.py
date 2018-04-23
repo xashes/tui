@@ -1,7 +1,7 @@
 import jaqs.util as jutil
 from jaqs.data import RemoteDataService
 
-from consts import DATA_CONFIG_PATH
+from .consts import DATA_CONFIG_PATH
 
 data_config = jutil.read_json(DATA_CONFIG_PATH)
 print(data_config)
