@@ -26,7 +26,7 @@ class Company(nm.StructuredNode):
     name = nm.StringProperty(unique_index=True, require=True)
     symbol = nm.StringProperty()
     market = nm.StringProperty()
-    list_date = nm.DateTimeProperty()
+    list_date = nm.IntegerProperty()
     updated = nm.DateTimeProperty(default_now=True)
 
     concept = nm.RelationshipTo(
@@ -52,6 +52,9 @@ class Company(nm.StructuredNode):
 class Index(nm.StructuredNode):
     name = nm.StringProperty(unique_index=True, require=True)
     symbol = nm.StringProperty()
+    market = nm.StringProperty()
+    list_date = nm.IntegerProperty()
+    updated = nm.DateTimeProperty(default_now=True)
 
 
 class Fund(nm.StructuredNode):
