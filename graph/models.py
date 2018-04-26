@@ -1,7 +1,6 @@
 from django.db import models
 import neomodel as nm
 
-
 # Relationship Models
 class ComponentRel(nm.StructuredRel):
     updated = nm.DateTimeProperty(default_now=True)
@@ -76,3 +75,15 @@ class Industry(Concept):
 
 class Product(nm.StructuredNode):
     pass
+
+class order(nm.StructuredNode):
+    price = nm.FloatProperty()
+    shares = nm.FloatProperty()
+    date = nm.DateTimeProperty(default_now=True)
+
+    if shares.__gt__ == 0:
+        side = 'buy'
+    else:
+        side = 'sell'
+
+    company = nm.RelationshipTo('Company', side.upper())

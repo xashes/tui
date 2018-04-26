@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:ivey198013@192.168.199.141:7687')
+NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:ivey198013@192.168.199.140:7687')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'charts',
     'tdata',
     'graph',
+    'portfolio',
 ]
 
 MIDDLEWARE = [

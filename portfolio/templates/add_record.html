@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Add Record</title>
+    </head>
+    <body>
+        <h2>Add Record</h2>
+        <form method="post">
+            <input name="symbol" type="text" placeholder="symbol"><br>
+            <input type="text" name="price" placeholder="price" /><br>
+            <input type="text" name="shares" placeholder="shares" /><br>
+            <input type="date" name="date" /><br>
+            <button id="btn" type="submit">Add</button>
+            {% csrf_token %}
+        </form>
+    </body>
+</html>

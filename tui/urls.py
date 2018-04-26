@@ -21,4 +21,5 @@ urlpatterns = [
     re_path('^charts/', include('charts.urls')),
     re_path('^tdata/', include('tdata.urls')),
     re_path('^graph/', include('graph.urls')),
+    re_path('^portfolio/', include('portfolio.urls')),
 ]
