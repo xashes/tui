@@ -16,6 +16,7 @@ jaqs = "*"
 selenium = "*"
 "flake8" = "*"
 autoflake = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.6"
