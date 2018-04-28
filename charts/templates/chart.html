@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Charts</title>
+    {% for jsfile_name in script_list %}
+    <script src="{{ host }}/{{ jsfile_name }}.js"></script>
+    {% endfor %}
+</head>
+
+<body>
+    <form method="POST">
+        <input name="symbol" id="id_symbol" placeholder="Enter a symbol" />
+        {% csrf_token %}
+    </form>
+    {{ chart|safe }}
+</body>
+
+</html>
