@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_neomodel',
     'charts',
-    'tdata',
     'graph',
     'portfolio',
 ]
