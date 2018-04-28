@@ -28,13 +28,13 @@ class NewVisitorTest(LiveServerTestCase):
                     raise e
                 time.sleep(0.5)
 
-    def test_can_input_symbol_and_display_kline(self):
+    def test_can_input_symbol_and_display_chart(self):
         # Helen has heard about a online market charts app. She goes to checkout
         # its charts page
-        self.browser.get(f'{self.live_server_url}/charts/kline')
+        self.browser.get(f'{self.live_server_url}/charts/chart')
 
-        # She notices the page title and header mention "Kline"
-        self.assertIn('Kline', self.browser.title)
+        # She notices the page title and header mention "Chart"
+        self.assertIn('Chart', self.browser.title)
 
         # She is invited to enter a symbol straight away.
         inputbox = self.browser.find_element_by_id('id_symbol')
@@ -46,7 +46,7 @@ class NewVisitorTest(LiveServerTestCase):
         sample_symbol2 = '000002.SH'
         inputbox.send_keys(sample_symbol)
 
-        # When she hits enter, the page updates, and now the page display a kline
+        # When she hits enter, the page updates, and now the page display a chart
         # chart with the symbol displayed as the chart title.
         # There's also a table displays symbols that her recently viewed.
         inputbox.send_keys(Keys.ENTER)
@@ -60,8 +60,8 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys(Keys.ENTER)
 
         # The page updates again, and now shows both symbols on the recently
-        # viewed table with this symbol on the top, and display the kline
+        # viewed table with this symbol on the top, and display the chart
         # chart for this symbol.
         self.wait_for_row_in_list_table('id_recent_table', sample_symbol)
         self.wait_for_row_in_list_table('id_recent_table', sample_symbol2)
-        self.fail('Finish the test for kline chart')
+        self.fail('Finish the test for chart chart')

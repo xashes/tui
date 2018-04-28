@@ -3,5 +3,5 @@ from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    re_path('^kline/$', views.kline, name='kline'),
+    re_path('^$', views.chart, name='chart'),
 ]
