@@ -11,6 +11,7 @@ sqlalchemy = "*"
 neomodel = "*"
 django-neomodel = "*"
 jaqs = "*"
+tdata = "*"
 
 [dev-packages]
 selenium = "*"
