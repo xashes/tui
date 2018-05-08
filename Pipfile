@@ -18,6 +18,7 @@ selenium = "*"
 "flake8" = "*"
 autoflake = "*"
 ipython = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.6"
