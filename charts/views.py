@@ -12,8 +12,9 @@ def chart(request):
         symbol = request.POST.get('symbol', '')
     bar = local.daily(symbol)
     grids = charts.grids(bar)
+    zen = charts.brush(bar)
     context = dict(
-        chart=grids.render_embed(),
+        chart=zen.render_embed(),
         host=REMOTE_HOST,
         script_list=grids.get_js_dependencies())
     return render(request, 'chart.html', context)

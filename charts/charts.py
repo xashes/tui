@@ -1,5 +1,6 @@
-from pyecharts import Kline, Bar
-from pyecharts import Grid
+from pyecharts import Kline, Bar, Line
+from pyecharts import Grid, Overlap, Page
+from tfeature.zen import hist_sum
 
 
 def grids(data):
@@ -28,3 +29,37 @@ def grids(data):
     grid.add(turnover, grid_top='65%')
     grid.show_config()
     return grid
+
+
+def brush(data):
+    data = hist_sum(data)
+    kline = Kline()
+    kline.add(
+        'Kline',
+        data.index,
+        data.loc[:, ['open', 'close', 'low', 'high']].values,
+        mark_line=['max', 'min'],
+        mark_line_valuedim=['highest', 'lowest'],
+        is_datazoom_show=True,
+        datazoom_xaxis_index=[0, 1],
+    )
+    brush = Line()
+    brush.add(
+        'Brush',
+        data.index,
+        data.endpoint.values,
+    )
+    overlap = Overlap()
+    overlap.add(kline)
+    overlap.add(brush)
+
+    macd = Bar()
+    macd.add(
+        'MACD',
+        data.index,
+        data.hist_sum.values,
+    )
+    page = Page()
+    page.add(overlap)
+    page.add(macd)
+    return page

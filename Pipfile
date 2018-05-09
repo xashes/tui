@@ -5,13 +5,14 @@ name = "pypi"
 
 [packages]
 pyecharts = "*"
-django = "*"
+Django = "*"
 fire = "*"
-sqlalchemy = "*"
+SQLAlchemy = "*"
 neomodel = "*"
-django-neomodel = "*"
+django_neomodel = "*"
 jaqs = "*"
 tdata = "*"
+tfeature = "*"
 
 [dev-packages]
 selenium = "*"
@@ -19,6 +20,7 @@ selenium = "*"
 autoflake = "*"
 ipython = "*"
 pylint = "*"
+"autopep8" = "*"
 
 [requires]
 python_version = "3.6"
