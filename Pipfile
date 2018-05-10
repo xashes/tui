@@ -1,26 +1,18 @@
 [[source]]
-url = "https://pypi.python.org/simple"
+url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
-pyecharts = "*"
-Django = "*"
-fire = "*"
-SQLAlchemy = "*"
-neomodel = "*"
-django_neomodel = "*"
 jaqs = "*"
+django = "*"
 tdata = "*"
-tfeature = "*"
-
+django-neomodel = "*"
+pyecharts = "*"
+ta-lib = "*"
+fire = "*"
+     
 [dev-packages]
-selenium = "*"
-"flake8" = "*"
-autoflake = "*"
-ipython = "*"
-pylint = "*"
-"autopep8" = "*"
 
 [requires]
 python_version = "3.6"
