@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'charts',
     'graph',
     'portfolio',
+    'features',
 ]
 
 MIDDLEWARE = [

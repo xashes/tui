@@ -1,6 +1,6 @@
 from pyecharts import Kline, Bar, Line
 from pyecharts import Grid, Overlap, Page
-from tfeature.zen import hist_sum
+from features.zen import hist_sum
 
 
 def grids(data):
